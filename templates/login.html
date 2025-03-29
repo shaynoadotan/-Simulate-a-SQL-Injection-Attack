@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>התחברות</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>התחבר</h2>
+    <form action="/login" method="POST">
+        <label>שם משתמש:</label>
+        <input type="text" name="username">
+        <label>סיסמה:</label>
+        <input type="password" name="password">
+        <button type="submit">כניסה</button>
+    </form>
+</body>
+</html>
