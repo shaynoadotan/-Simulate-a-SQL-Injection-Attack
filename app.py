@@ -38,7 +38,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        # 🔴 קוד פגיע ל-SQL Injection (התקפה עם: ' OR '1'='1)
+        # SQL Injection (התקפה עם: ' OR '1'='1)
         query = text(f"SELECT * FROM user WHERE username = '{username}' AND password = '{password}'")
         result = db.session.execute(query).fetchone()
 
